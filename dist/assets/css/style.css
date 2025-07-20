@@ -1344,11 +1344,6 @@ input:focus,
   border-color: rgba(29, 209, 0, 1);
   border-color: rgba(29, 209, 0, var(--tw-border-opacity, 1));
 }
-.bg-\[\#1dd100\]{
-  --tw-bg-opacity: 1;
-  background-color: rgba(29, 209, 0, 1);
-  background-color: rgba(29, 209, 0, var(--tw-bg-opacity, 1));
-}
 .bg-\[\#1dd\]{
   --tw-bg-opacity: 1;
   background-color: rgba(17, 221, 221, 1);

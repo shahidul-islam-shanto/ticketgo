@@ -14,13 +14,9 @@ buttons.forEach(function (btn) {
     total += pricePerTicket;
     totalSeat++;
     seatMinus--;
-
-    // input area
     if (totalSeat <= 4) {
-      // grant total
       const grantTotal = document.getElementById("grand-total");
       grantTotal.innerText = total;
-
       // total price set
       const priceTotal = document.getElementById("total-price");
       priceTotal.innerText = total;
@@ -34,7 +30,7 @@ buttons.forEach(function (btn) {
       seatMinusLest.innerText = seatMinus;
 
       // set background color
-      btn.classList.add("bg-[#1dd100]");
+      btn.classList.add("bg-primary");
     }
 
     // clicked button disable
@@ -52,16 +48,12 @@ buttons.forEach(function (btn) {
 const removeDis = document.getElementById("apply-area");
 removeDis.disabled = false;
 
-function discountTicket(total) {
+function discountTicket() {
   // input area
   const apply = document.getElementById("discount-area");
   const applyValue = apply.value;
 
   if (applyValue === "NEW15") {
-    const grantTotal = document.getElementById("grand-total");
-    const grantTotalValue = (total * 20) / 100;
-    grantTotal.innerText = grantTotalValue;
-
     // hidden area
     const areaDis = document.getElementById("form-area");
     areaDis.classList.add("hidden");
@@ -71,15 +63,9 @@ function discountTicket(total) {
 //
 
 function nextAddress() {
-  console.log("click");
-
-  const numberArea = document.getElementById("number-area");
-  const valueNum = numberArea.value;
-  console.log(valueNum);
-
-  if (valueNum === !isNaN()) {
+  if (valueNum === "number") {
     const sunBtn = document.getElementById("submit-btn");
+    sunBtn.removeAttribute("disabled");
     sunBtn.classList.add("bg-[#1dd]");
-    sunBtn.classList.remove("bg-primary");
   }
 }
